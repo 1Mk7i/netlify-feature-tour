@@ -1,5 +1,7 @@
 ---
 import Layout from '../components/layout.astro';
+import AddNumber from '../components/AddNumber.jsx';
+import Calculator from '../components/Calculator.jsx';
 ---
 
 <style>
@@ -44,20 +46,16 @@ import Layout from '../components/layout.astro';
   margin: 0;
 }
 
-
 </style>
 
 <Layout
-  title="Netlify Feature Tour"
-  description="This is a small site to show the most powerful features of Netlify quickly!"
-  home
+title="Netlify Feature Tour"
+description="This is a small site to show the most powerful features of Netlify quickly!"
+home
 >
   <main class="steps">
     <section class="step">
       <h2 class="stepHeading">Deploy Previews</h2>
-      <p>
-        👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾
-      </p>
       <a href="/deploy-previews" class="button">
         Learn more <span class="sr-only">about Deploy Previews</span>
       </a>
@@ -65,9 +63,6 @@ import Layout from '../components/layout.astro';
 
     <section class="step">
       <h2 class="stepHeading">Instant Rollbacks</h2>
-      <p>
-        👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾
-      </p>
       <a href="/instant-rollbacks" class="button">
         Learn more
         <span class="sr-only">about Instant Rollbacks</span>
@@ -76,9 +71,6 @@ import Layout from '../components/layout.astro';
 
     <section class="step">
       <h2 class="stepHeading">Netlify Functions</h2>
-      <p>
-        👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾
-      </p>
       <a href="/functions" class="button">
       Learn more
       <span class="sr-only">about Netlify Functions</span>
@@ -87,12 +79,19 @@ import Layout from '../components/layout.astro';
 
     <section class="step">
       <h2 class="stepHeading">Netlify Forms</h2>
-      <p>
-        👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾
-      </p>
       <a href="/netlify-forms" class="button">
         Learn more <span class="sr-only">about Netlify Forms</span>
       </a>
     </section>
-  </main>
+
+    <section class="step">
+        <h2 class="stepHeading">Counter Example</h2>
+        <AddNumber client:load/>
+    </section>
+
+    <section class="step">
+        <h2 class="stepHeading">Calculator</h2>
+        <Calculator client:load/>
+    </section>
+</main>
 </Layout>
