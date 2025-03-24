@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { h } from 'preact';
+import { useState } from 'preact/hooks';
 
 const Calculator = () => {
     const [a, getA] = useState(0);
@@ -17,7 +18,7 @@ const Calculator = () => {
         } else {
             getRes("error");
         }
-    }
+    };
 
     return (
         <div>
@@ -30,6 +31,6 @@ const Calculator = () => {
             <h1>Result: {res}</h1>
         </div>
     );
-}
+};
 
 export default Calculator;

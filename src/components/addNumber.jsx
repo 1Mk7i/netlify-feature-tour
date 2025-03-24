@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { h } from 'preact';
+import { useState } from 'preact/hooks';
 
 const AddNumber = () => {
     const [count, setCount] = useState(0);
@@ -20,5 +21,5 @@ const AddNumber = () => {
     );
 };
 
-// npm install astro@latest @astrojs/react@latest react@latest react-dom@latest
 export default AddNumber;
+// npm install astro@latest @astrojs/react@latest react@latest react-dom@latest
