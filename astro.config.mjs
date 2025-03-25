@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import preact from "@astrojs/preact";
+import preact from '@astrojs/preact';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
@@ -7,7 +7,7 @@ export default defineConfig({
   integrations: [
     preact(),
     sitemap({
-      canonicalURL: 'https://feature-tour.netlify.app'
-    })
+      canonicalURL: 'https://feature-tour.netlify.app',
+    }),
   ],
 });
