@@ -2,12 +2,125 @@
 import Layout from '../components/layout.astro';
 ---
 
+<style>
+    .cv-pers-info {
+        user-select: none;
+        background: var(--light);
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: min(90vw, 250px);
+        justify-content: center;
+        padding: 5rem 5vw;
+    }
+
+    .cv-pers-info {
+        background: var(--white);
+        border: 1px solid var(--lightBorder);
+        border-radius: var(--card-radius);
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+        padding: 1rem 1.5rem 1.5rem;
+        text-align: left;
+        box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
+    }
+
+    .cv-pers-info {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .cv-body {
+        user-select: none;
+        background: var(--light);
+        display: flex;
+        gap: 2rem;
+        grid-template-columns: min(90vw, 250px);
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    
+    .cv-career, .cv-education, .cv-skills {
+        background: var(--white);
+        border: 1px solid var(--lightBorder);
+        border-radius: var(--card-radius);
+        display: flex;
+        flex-direction: column;
+        font-weight: 100;
+        padding: 1rem 1.5rem 1.5rem;
+        text-align: left;
+        box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
+        max-width: 50%;
+    }
+    .cv-work {
+        background: var(--white);
+        border: 1px solid var(--lightBorder);
+        border-radius: var(--card-radius);
+        display: flex;
+        flex-direction: column;
+        font-weight: 100;
+        padding: 1rem 1.5rem 1.5rem;
+        text-align: left;
+        box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
+    }
+
+    .cv-group{
+        display: flex;
+        gap: 2rem;
+        grid-template-columns: min(90vw, 250px);
+        justify-content: center;
+        flex-direction: row;
+    }
+
+</style>
+
 <Layout
-  title="Deploy Previews"
-  description="See and share your changes in a production environment so you can ship with confidence. Gather feedback in your preferred project management tool right through your Deploy Previews!"
+  title="CV"
 >
     <main>
-        <h2>This is a Deploy Preview.</h2>
+        <h2>This is a Curriculum Vitae.</h2>
+        <div class="cv-pers-info">
+            <h2 style="margin-bottom: 0;">Personal Information</h2><div style="font-size: medium; font-weight: 200;">Ihor Evlachovich<br>Kropyvnitsky, Ukraine<br>+380962587469<br>ihor-dev@gmail.com</div>
+        </div>
+        <div class="cv-body">
+            <div class="cv-group">
+                <div class="cv-career">
+                    <h2>Career Objective</h2>
+                    Enthusiastic IT Specialist with a Bachelor's Degree in IT and a solid foundation in technical support and system maintenance. Passionate about troubleshooting and optimizing IT systems to ensure seamless operations. Eager to apply problem-solving skills and technical knowledge in a professional setting while continuously learning and growing in the IT field.
+                </div>
+                <div class="cv-education">
+                    <h2>Education</h2>
+                    Bachelor's Degree in IT, Computer Science, or a related field<b>Robert Elvorti Economics and Technology Institute, 2022 - 2026</b>A strong academic background in IT, with a focus on system management, networking, and cybersecurity.
+                </div>
+            </div>
+            <div class="cv-group">
+                <div class="cv-skills">
+                    <h2>Technical Skills</h2>
+                    <li><b>IT support and system administration</b> - Provided technical support to users by diagnosing and resolving hardware and software issues, ensuring uninterrupted IT operations.</li>
+                    <li><b>Installation and configuration of hardware and software</b> – Set up and configured computers, printers, and software applications, ensuring proper integration with existing systems.</li>
+                    <li><b>ERP systems, networking, and cybersecurity</b> – Assisted in configuring ERP platforms such as SAP B1 and IFS, maintained network connectivity, and implemented basic security measures like firewall monitoring and antivirus updates.</li>
+                    <li><b>IT asset management and data backup</b> – Maintained an inventory of IT hardware and software licenses, ensured timely updates, and performed regular data backups to secure critical business information.</li>
+                </div>
+                <div class="cv-skills">
+                    <h2>Soft Skills</h2>
+                    <li><b>Analytical thinking and problem-solving</b> – Identified and resolved system failures and inefficiencies, minimizing downtime and optimizing IT performance.</li>
+                    <li><b>Teamwork and collaboration</b> – Worked closely with colleagues to troubleshoot and resolve IT-related issues, ensuring seamless support across departments.</li>
+                    <li><b>Organizational and time management</b> – Managed multiple IT tasks efficiently, prioritizing urgent issues while maintaining regular system maintenance.</li>
+                    <li><b>Adaptability and responsibility</b> – Quickly learned new technologies and adapted to changing IT environments, taking responsibility for maintaining system stability and security.</li>
+                </div>
+            </div>
+            <div class="cv-work">
+                <h2>Work Experience</h2>
+                Since there is no prior experience in a similar position, internships, freelance work, or personal projects can be mentioned.
+                <br><b>Junior IT Support Specialist (Freelance)</b><b>Project: "Cocktail bar online", 2023 - 2024</b><br>
+                <li>Provided technical support to users</li>
+                <li>Installed and configured operating systems and software</li>
+                <li>Conducted basic administration of local networks</li>
+            </div>
+            <h3>References available upon request.</h3>
+        </div>
     </main>
   
 </Layout>
